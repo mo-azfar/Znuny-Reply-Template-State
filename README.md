@@ -19,4 +19,4 @@
 		*Where Template name = 'Waiting for Customer Response', selected ticket state will be 'pending auto close+'
 		
 		
-![response-state](response-state.gif)
+![response-state](response-state.mp4)
