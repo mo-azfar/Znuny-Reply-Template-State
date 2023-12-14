@@ -70,9 +70,8 @@ sub Run {
 			if ( $NextStateID )
 			{
 				$StateGenerate = 1;
+                last StateAtt;
 			}
-			
-            last StateAtt;
         }
 	}
 	
