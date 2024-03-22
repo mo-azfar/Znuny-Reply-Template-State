@@ -77,13 +77,23 @@ sub Run {
 	
 	if ( $StateGenerate )
 	{	
-		my %PossibleNextStates;
-		$PossibleNextStates{$NextStateID} = $NextStateName;
-		
 		my %Ticket = $TicketObject->TicketGet(
 		    TicketID      => $TicketID,
 		    UserID        => 1,
 		);
+
+        #get value from process dropdown element
+        my @option_values = ${ $Param{Data} } =~ /<select[^>]*id="StateID"[^>]*>(.*?)<\/select>/s;
+        my @select_values = $option_values[0] =~ /<option value="([^"]+)".*>/g;
+
+        my @lines = split /\n/, $option_values[0];
+        my %PossibleNextStates;
+        foreach my $line (@lines) {
+            if ($line =~ /<option value="(\d+)">(.*?)<\/option>/) {
+                my ($value, $label) = ($1, $2);
+                $PossibleNextStates{$value} = $label;
+            }
+        }
 
 		#new state selection based on reply template state config
 		my $NewOutput = $LayoutObject->BuildSelection(
