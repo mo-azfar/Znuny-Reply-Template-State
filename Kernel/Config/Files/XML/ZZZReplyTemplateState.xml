@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <otrs_config version="2.0" init="Config">
-	<Setting Name="Frontend::Output::FilterElementPost###ShowReplyTemplateState" Required="0" Valid="1">
+    <Setting Name="Frontend::Output::FilterElementPost###ShowReplyTemplateState" Required="0" Valid="1">
         <Description Translatable="1">Module to show qr scanner.</Description>
         <Navigation>Frontend::Base::OutputFilter</Navigation>
         <Value>
@@ -11,7 +11,7 @@
                         <Item Key="AgentTicketCompose">1</Item>
                     </Hash>
                 </Item>
-				<Item Key="ResponseTemplateDefaultState">
+                <Item Key="ResponseTemplateDefaultState">
                     <Hash>
                         <Item Key="Template Name">State Name</Item>
                     </Hash>
