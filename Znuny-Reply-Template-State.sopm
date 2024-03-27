@@ -3,7 +3,7 @@
     <Name>Znuny-Reply-Template-State</Name>
     <Version>7.0.4</Version>
     <Vendor>mo-azfar</Vendor>
-    <URL>https://otrs.com/</URL>
+    <URL>https://github.com/mo-azfar</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <ChangeLog Version="7.0.1" Date="2023-10-03 10:00:00 +0800">New package.</ChangeLog>
     <ChangeLog Version="7.0.2" Date="2023-12-14 12:32:00 +0800">Code tidied.</ChangeLog>
