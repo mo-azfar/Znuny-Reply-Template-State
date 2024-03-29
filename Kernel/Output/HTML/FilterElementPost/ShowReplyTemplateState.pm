@@ -43,17 +43,12 @@ sub Run {
 
     my $LayoutObject           = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
     my $StandardTemplateObject = $Kernel::OM->Get('Kernel::System::StandardTemplate');
-    my $TicketObject           = $Kernel::OM->Get('Kernel::System::Ticket');
-
-    my $TicketID   = $ParamObject->GetParam( Param => 'TicketID' );
+   
     my $ResponseID = $ParamObject->GetParam( Param => 'ResponseID' );
-
-    my $StateGenerate = 0;
     my $NextStateName = 0;
     my $NextStateID   = 0;
 
     StateAtt:
-
     #compare config with current template screen id
     for my $TemplateName ( sort keys %{ $Param{ResponseTemplateDefaultState} } )
     {
@@ -61,61 +56,29 @@ sub Run {
             StandardTemplate => $TemplateName,
         );
 
-        if ( $ResponseID eq $StandardTemplateID ) {
-
-            $NextStateName = $Param{ResponseTemplateDefaultState}{$TemplateName};
-            $NextStateID   = $Kernel::OM->Get('Kernel::System::State')->StateLookup(
-                State => $NextStateName,
-            );
-
-            if ($NextStateID)
-            {
-                $StateGenerate = 1;
-                last StateAtt;
-            }
-        }
-    }
-
-    if ($StateGenerate)
-    {
-        my %Ticket = $TicketObject->TicketGet(
-            TicketID => $TicketID,
-            UserID   => 1,
+		next StateAtt if $ResponseID ne $StandardTemplateID;
+		
+        $NextStateName = $Param{ResponseTemplateDefaultState}{$TemplateName};
+        $NextStateID   = $Kernel::OM->Get('Kernel::System::State')->StateLookup(
+            State => $NextStateName,
         );
 
-        #get value from process dropdown element
-        my @OptionValues = ${ $Param{Data} } =~ /<select[^>]*id="StateID"[^>]*>(.*?)<\/select>/s;
-        my @SelectValues = $OptionValues[0]  =~ /<option value="([^"]+)".*>/g;
-
-        my @Lines = split /\n/, $OptionValues[0];
-        my %PossibleNextStates;
-        for my $Line (@Lines) {
-            if ( $Line =~ /<option value="(\d+)">(.*?)<\/option>/ ) {
-                my ( $Value, $Label ) = ( $1, $2 );
-                $PossibleNextStates{$Value} = $Label;
-            }
+        if ($NextStateID)
+        {	
+			my $JS = qq~
+					\$(document).ready(function() {
+						\$('#StateID').val('$NextStateID').trigger('change'); 
+					});       
+			~;
+			
+			#add jquery onclick block
+			$LayoutObject->AddJSOnDocumentComplete(
+				Code => $JS,
+			);
+			
+            last StateAtt;
         }
-
-        #new state selection based on reply template state config
-        my $NewOutput = $LayoutObject->BuildSelection(
-            Data          => \%PossibleNextStates,
-            Name          => 'StateID',
-            PossibleNone  => 1,
-            Class         => 'Modernize',
-            SelectedID    => $NextStateID,
-            SelectedValue => $PossibleNextStates{$NextStateID},
-            Title         => $Ticket{Title},
-        );
-
-        my $SearchFieldStart
-            = quotemeta "<select class=\"Modernize\" id=\"StateID\" name=\"StateID\" title=\"$Ticket{Title}\">";
-        my $SearchFieldEnd = quotemeta "</select>";
-        my $ReturnField    = qq~$NewOutput
-        ~;
-
-        #search and replace
-        ${ $Param{Data} } =~ s{$SearchFieldStart[\d\D]*?$SearchFieldEnd}{$ReturnField};
-
+        
     }
 
     return 1;

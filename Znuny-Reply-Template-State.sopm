@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>Znuny-Reply-Template-State</Name>
-    <Version>7.0.4</Version>
+    <Version>7.0.5</Version>
     <Vendor>mo-azfar</Vendor>
-    <URL>https://github.com/mo-azfar</URL>
+    <URL>https://github.com/mo-azfar/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <ChangeLog Version="7.0.1" Date="2023-10-03 10:00:00 +0800">New package.</ChangeLog>
     <ChangeLog Version="7.0.2" Date="2023-12-14 12:32:00 +0800">Code tidied.</ChangeLog>
     <ChangeLog Version="7.0.3" Date="2024-03-22 19:32:00 +0800">Display all state instead single state in State selection dropdown.</ChangeLog>
     <ChangeLog Version="7.0.4" Date="2024-03-27 07:32:00 +0800">Applied code policy.</ChangeLog>
+    <ChangeLog Version="7.0.5" Date="2024-03-29 20:32:00 +2000">Code tidied.</ChangeLog>
     <Description Lang="en">set ticket state based on selected compose / reply template</Description>
     <Framework>7.0.x</Framework>
     <IntroInstall Lang="en" Title="Install Information" Type="pre"><![CDATA[
@@ -27,7 +28,8 @@
         7.0.1 - New package.<br/>
         7.0.2 - Code tidied.<br/>
         7.0.3 - Display all state instead single state in State selection dropdown.<br/>
-        7.0.4 - Applied code policy.
+        7.0.4 - Applied code policy.<br/>
+        7.0.5 - Code tidied..
         <br/><br/>
         ((enjoy))<br/>
         <br/>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.1">
+    <Name>Znuny-Reply-Template-State</Name>
+    <Version>7.0.5</Version>
+    <Vendor>mo-azfar</Vendor>
+    <URL>https://github.com/mo-azfar/</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
+    <ChangeLog Date="2023-10-03 10:00:00 +0800" Version="7.0.1">New package.</ChangeLog>
+    <ChangeLog Date="2023-12-14 12:32:00 +0800" Version="7.0.2">Code tidied.</ChangeLog>
+    <ChangeLog Date="2024-03-22 19:32:00 +0800" Version="7.0.3">Display all state instead single state in State selection dropdown.</ChangeLog>
+    <ChangeLog Date="2024-03-27 07:32:00 +0800" Version="7.0.4">Applied code policy.</ChangeLog>
+    <ChangeLog Date="2024-03-29 20:32:00 +2000" Version="7.0.5">Code tidied.</ChangeLog>
+    <Description Lang="en">set ticket state based on selected compose / reply template</Description>
+    <Framework>7.0.x</Framework>
+    <IntroInstall Lang="en" Title="Install Information" Type="pre">
+        &lt;br/&gt;
+        &lt;b&gt;WELCOME&lt;/b&gt;
+        &lt;br/&gt;
+        &lt;br/&gt;
+        You are about to install the package Znuny-Reply-Template-State. Check &lt;a href='https://github.com/mo-azfar/Znuny-Reply-Template-State' target='_blank'/&gt;README&lt;/a&gt;&lt;br/&gt;
+        &lt;br/&gt;&lt;br/&gt;
+        ((enjoy))&lt;br/&gt;
+        &lt;br/&gt;
+    </IntroInstall>
+    <IntroUpgrade Lang="en" Title="Upgrade Information" Type="pre">
+        &lt;br/&gt;
+        Changelog&lt;br/&gt;
+        7.0.1 - New package.&lt;br/&gt;
+        7.0.2 - Code tidied.&lt;br/&gt;
+        7.0.3 - Display all state instead single state in State selection dropdown.&lt;br/&gt;
+        7.0.4 - Applied code policy.&lt;br/&gt;
+        7.0.5 - Code tidied..
+        &lt;br/&gt;&lt;br/&gt;
+        ((enjoy))&lt;br/&gt;
+        &lt;br/&gt;
+    </IntroUpgrade>
+    <BuildDate>2024-03-29 20:37:24</BuildDate>
+    <BuildHost>app.wsl.my</BuildHost>
+    <Filelist>
+        <File Location="Kernel/Config/Files/XML/ZZZReplyTemplateState.xml" Permission="644" Encode="Base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPG90cnNfY29uZmlnIHZlcnNpb249IjIuMCIgaW5pdD0iQ29uZmlnIj4KICAgIDxTZXR0aW5nIE5hbWU9IkZyb250ZW5kOjpPdXRwdXQ6OkZpbHRlckVsZW1lbnRQb3N0IyMjU2hvd1JlcGx5VGVtcGxhdGVTdGF0ZSIgUmVxdWlyZWQ9IjAiIFZhbGlkPSIxIj4KICAgICAgICA8RGVzY3JpcHRpb24gVHJhbnNsYXRhYmxlPSIxIj5Nb2R1bGUgdG8gc2hvdyBxciBzY2FubmVyLjwvRGVzY3JpcHRpb24+CiAgICAgICAgPE5hdmlnYXRpb24+RnJvbnRlbmQ6OkJhc2U6Ok91dHB1dEZpbHRlcjwvTmF2aWdhdGlvbj4KICAgICAgICA8VmFsdWU+CiAgICAgICAgICAgIDxIYXNoPgogICAgICAgICAgICAgICAgPEl0ZW0gS2V5PSJNb2R1bGUiPktlcm5lbDo6T3V0cHV0OjpIVE1MOjpGaWx0ZXJFbGVtZW50UG9zdDo6U2hvd1JlcGx5VGVtcGxhdGVTdGF0ZTwvSXRlbT4KICAgICAgICAgICAgICAgIDxJdGVtIEtleT0iVGVtcGxhdGVzIj4KICAgICAgICAgICAgICAgICAgICA8SGFzaD4KICAgICAgICAgICAgICAgICAgICAgICAgPEl0ZW0gS2V5PSJBZ2VudFRpY2tldENvbXBvc2UiPjE8L0l0ZW0+CiAgICAgICAgICAgICAgICAgICAgPC9IYXNoPgogICAgICAgICAgICAgICAgPC9JdGVtPgogICAgICAgICAgICAgICAgPEl0ZW0gS2V5PSJSZXNwb25zZVRlbXBsYXRlRGVmYXVsdFN0YXRlIj4KICAgICAgICAgICAgICAgICAgICA8SGFzaD4KICAgICAgICAgICAgICAgICAgICAgICAgPEl0ZW0gS2V5PSJUZW1wbGF0ZSBOYW1lIj5TdGF0ZSBOYW1lPC9JdGVtPgogICAgICAgICAgICAgICAgICAgIDwvSGFzaD4KICAgICAgICAgICAgICAgIDwvSXRlbT4KICAgICAgICAgICAgPC9IYXNoPgogICAgICAgIDwvVmFsdWU+CiAgICA8L1NldHRpbmc+Cjwvb3Ryc19jb25maWc+Cg==</File>
+        <File Location="Kernel/Output/HTML/FilterElementPost/ShowReplyTemplateState.pm" Permission="644" Encode="Base64">IyAtLQojIENvcHlyaWdodCAoQykgMjAyNCBtby1hemZhciwgaHR0cHM6Ly9naXRodWIuY29tL21vLWF6ZmFyLwojIC0tCiMgVGhpcyBzb2Z0d2FyZSBjb21lcyB3aXRoIEFCU09MVVRFTFkgTk8gV0FSUkFOVFkuIEZvciBkZXRhaWxzLCBzZWUKIyB0aGUgZW5jbG9zZWQgZmlsZSBDT1BZSU5HIGZvciBsaWNlbnNlIGluZm9ybWF0aW9uIChHUEwpLiBJZiB5b3UKIyBkaWQgbm90IHJlY2VpdmUgdGhpcyBmaWxlLCBzZWUgaHR0cHM6Ly93d3cuZ251Lm9yZy9saWNlbnNlcy9ncGwtMy4wLnR4dC4KIyAtLQoKcGFja2FnZSBLZXJuZWw6Ok91dHB1dDo6SFRNTDo6RmlsdGVyRWxlbWVudFBvc3Q6OlNob3dSZXBseVRlbXBsYXRlU3RhdGU7Cgp1c2Ugc3RyaWN0Owp1c2Ugd2FybmluZ3M7CgpvdXIgQE9iamVjdERlcGVuZGVuY2llcyA9ICgKICAgICdLZXJuZWw6Ok91dHB1dDo6SFRNTDo6TGF5b3V0JywKICAgICdLZXJuZWw6OlN5c3RlbTo6U3RhbmRhcmRUZW1wbGF0ZScsCiAgICAnS2VybmVsOjpTeXN0ZW06OldlYjo6UmVxdWVzdCcsCiAgICAnS2VybmVsOjpTeXN0ZW06OlN0YXRlJywKICAgICdLZXJuZWw6OlN5c3RlbTo6VGlja2V0JywKKTsKCnVzZSBLZXJuZWw6OlN5c3RlbTo6VmFyaWFibGVDaGVjayBxdyg6YWxsKTsKCnN1YiBuZXcgewogICAgbXkgKCAkVHlwZSwgJVBhcmFtICkgPSBAXzsKCiAgICBteSAkU2VsZiA9IHt9OwogICAgYmxlc3MoICRTZWxmLCAkVHlwZSApOwoKICAgIHJldHVybiAkU2VsZjsKfQoKc3ViIFJ1biB7CiAgICBteSAoICRTZWxmLCAlUGFyYW0gKSA9IEBfOwoKICAgIG15ICRQYXJhbU9iamVjdCA9ICRLZXJuZWw6Ok9NLT5HZXQoJ0tlcm5lbDo6U3lzdGVtOjpXZWI6OlJlcXVlc3QnKTsKCiAgICBteSAkQWN0aW9uID0gJFBhcmFtT2JqZWN0LT5HZXRQYXJhbSggUGFyYW0gPT4gJ0FjdGlvbicgKTsKCiAgICByZXR1cm4gMSBpZiAhJEFjdGlvbjsKICAgIHJldHVybiAxIGlmICEkUGFyYW17VGVtcGxhdGVzfS0+eyRBY3Rpb259OwogICAgcmV0dXJuIDEgaWYgISRQYXJhbXtSZXNwb25zZVRlbXBsYXRlRGVmYXVsdFN0YXRlfTsKCiAgICBteSAkTGF5b3V0T2JqZWN0ICAgICAgICAgICA9ICRLZXJuZWw6Ok9NLT5HZXQoJ0tlcm5lbDo6T3V0cHV0OjpIVE1MOjpMYXlvdXQnKTsKICAgIG15ICRTdGFuZGFyZFRlbXBsYXRlT2JqZWN0ID0gJEtlcm5lbDo6T00tPkdldCgnS2VybmVsOjpTeXN0ZW06OlN0YW5kYXJkVGVtcGxhdGUnKTsKCiAgICBteSAkUmVzcG9uc2VJRCAgICA9ICRQYXJhbU9iamVjdC0+R2V0UGFyYW0oIFBhcmFtID0+ICdSZXNwb25zZUlEJyApOwogICAgbXkgJE5leHRTdGF0ZU5hbWUgPSAwOwogICAgbXkgJE5leHRTdGF0ZUlEICAgPSAwOwoKICAgIFN0YXRlQXR0OgoKICAgICNjb21wYXJlIGNvbmZpZyB3aXRoIGN1cnJlbnQgdGVtcGxhdGUgc2NyZWVuIGlkCiAgICBmb3IgbXkgJFRlbXBsYXRlTmFtZSAoIHNvcnQga2V5cyAleyAkUGFyYW17UmVzcG9uc2VUZW1wbGF0ZURlZmF1bHRTdGF0ZX0gfSApCiAgICB7CiAgICAgICAgbXkgJFN0YW5kYXJkVGVtcGxhdGVJRCA9ICRTdGFuZGFyZFRlbXBsYXRlT2JqZWN0LT5TdGFuZGFyZFRlbXBsYXRlTG9va3VwKAogICAgICAgICAgICBTdGFuZGFyZFRlbXBsYXRlID0+ICRUZW1wbGF0ZU5hbWUsCiAgICAgICAgKTsKCiAgICAgICAgbmV4dCBTdGF0ZUF0dCBpZiAkUmVzcG9uc2VJRCBuZSAkU3RhbmRhcmRUZW1wbGF0ZUlEOwoKICAgICAgICAkTmV4dFN0YXRlTmFtZSA9ICRQYXJhbXtSZXNwb25zZVRlbXBsYXRlRGVmYXVsdFN0YXRlfXskVGVtcGxhdGVOYW1lfTsKICAgICAgICAkTmV4dFN0YXRlSUQgICA9ICRLZXJuZWw6Ok9NLT5HZXQoJ0tlcm5lbDo6U3lzdGVtOjpTdGF0ZScpLT5TdGF0ZUxvb2t1cCgKICAgICAgICAgICAgU3RhdGUgPT4gJE5leHRTdGF0ZU5hbWUsCiAgICAgICAgKTsKCiAgICAgICAgaWYgKCROZXh0U3RhdGVJRCkKICAgICAgICB7CiAgICAgICAgICAgIG15ICRKUyA9IHFxfgogICAgICAgICAgICAgICAgICAgIFwkKGRvY3VtZW50KS5yZWFkeShmdW5jdGlvbigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgXCQoJyNTdGF0ZUlEJykudmFsKCckTmV4dFN0YXRlSUQnKS50cmlnZ2VyKCdjaGFuZ2UnKTsKICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgfjsKCiAgICAgICAgICAgICNhZGQganF1ZXJ5IG9uY2xpY2sgYmxvY2sKICAgICAgICAgICAgJExheW91dE9iamVjdC0+QWRkSlNPbkRvY3VtZW50Q29tcGxldGUoCiAgICAgICAgICAgICAgICBDb2RlID0+ICRKUywKICAgICAgICAgICAgKTsKCiAgICAgICAgICAgIGxhc3QgU3RhdGVBdHQ7CiAgICAgICAgfQoKICAgIH0KCiAgICByZXR1cm4gMTsKfQoKMTsK</File>
+    </Filelist>
+</otrs_package>
